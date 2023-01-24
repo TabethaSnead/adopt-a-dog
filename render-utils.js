@@ -30,11 +30,17 @@ export function renderDogDetail(dog) {
     img.src = `../assets/${dog.dog_breeds.name}.jpeg`;
     descriptionEl.textContent = dog.description;
     nameEl.textContent = dog.name;
-    ageEl.textContent = dog.age;
-    breedEl.textContent = dog.breed;
-    ageAndBreedEl.textContent = `${dog.age}${dog.dog_breeds.name}`;
-    console.log(img);
+    ageEl.textContent = `${dog.age} Years Old`;
+    breedEl.textContent = dog.dog_breeds.name;
 
-    div.append(img, descriptionEl, nameEl, ageEl, breedEl, ageAndBreedEl);
+    ageAndBreedEl.append(ageEl, breedEl);
+    div.classList.add('dog-detail');
+    descriptionEl.classList.add('description');
+    img.classList.add('img');
+
+    ageAndBreedEl.classList.add('age-and-breed');
+    nameEl.classList.add('name');
+
+    div.append(nameEl, img, ageAndBreedEl, descriptionEl);
     return div;
 }

@@ -10,7 +10,7 @@ window.addEventListener('load', async () => {
     const dogs = await getDogs();
     // const addedDog = renderDogCard(dog);
     allDogs = dogs;
-    console.log(allDogs);
+
     // dogListContainer.append(allDogs);
     displayAllDogs();
 });

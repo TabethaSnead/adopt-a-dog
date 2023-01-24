@@ -11,7 +11,6 @@ window.addEventListener('load', async () => {
     const dogDetail = renderDogDetail(dog[0]);
 
     dogDetailContainer.append(dogDetail);
-    console.log(dog);
 });
 // get the id from URL
 // use the id to fetch the dog
